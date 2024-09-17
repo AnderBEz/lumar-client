@@ -12,6 +12,7 @@ export default {
       },
       fontFamily: {
         //agregar fuente
+        'principal': ['Baskervville', 'serif']
       },
       colors: {
         'gold-highlight' : "#BA7712",
