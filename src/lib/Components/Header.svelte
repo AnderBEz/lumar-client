@@ -14,7 +14,7 @@
                 <p>Detras de un gran corte, existe una gran barbera.</p>
             </div>
             <div class="flex items-center justify-center py-3 text-center font-principal">
-                <a href="/src/routes/meeting/+page.svelte" class="px-3 py-2 lg:text-3xl lg:px-6 bg-yellow-focus rounded-lg hover:opacity-80 ease-in duration-200">Agendar una cita</a>
+                <a href="/meeting" class="px-3 py-2 lg:text-3xl lg:px-6 bg-yellow-focus rounded-lg hover:opacity-80 ease-in duration-200">Agendar una cita</a>
             </div>
 
         </div>
