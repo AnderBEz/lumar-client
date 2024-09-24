@@ -5,7 +5,7 @@
 </script>
 
 <header class="w-full lg:h-screen">
-    <div class="container py-6 flex items-center lg:justify-start lg:pt-80">
+    <div class="container py-36 lg:py-6 flex items-center lg:justify-start lg:pt-80">
         <div class="lg:flex lg:flex-col">
             <div class="text-center">
                 <h2 class="text-4xl lg:text-7xl text-white font-principal text-center">Barberia</h2>
