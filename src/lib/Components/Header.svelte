@@ -3,7 +3,7 @@
     import "../../routes/styles/images.css"
 </script>
 
-<header class="w-full h-screen">
+<header class="w-full lg:h-screen">
     <div class="container py-36 lg:py-6 flex items-center justify-center lg:justify-start lg:pt-80">
         <div class="flex flex-col text-center lg:text-start md:pl-0">
             <div class="text-center">
