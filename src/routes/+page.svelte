@@ -1,10 +1,14 @@
 <script>
-    import Header from "$lib/Components/Header.svelte";
+    import About from "$lib/Components/About.svelte";
+import Header from "$lib/Components/Header.svelte";
+  import Prices from "$lib/Components/Prices.svelte";
 import "../app.css"
     
 </script>
 
 <Header />
+<About />
+<Prices />
 
 <div>
     <h1>Popo</h1>
