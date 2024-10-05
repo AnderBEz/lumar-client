@@ -2,71 +2,57 @@
   import { json } from "@sveltejs/kit";
     import "../../app.css"
     import "../styles/images.css";
+  interface formData {
+    nombre: string;
+    numeroCel: string;
+    fecha: string;
+    hora: string;
+  }
 
-    interface formData {
-        nombre : string;
-        numeroCel: string;
-        fecha: string;
-        hora: string;
-    }
+  let nombre: string = "";
+  let numeroCel: string = "";
+  let fecha: string = "";
+  let hora: string = "";
 
-    let nombre : string = "";
-    let numeroCel : string = "";
-    let fecha : string = "";
-    let hora : string = "";
-
-    let successMessage : string | null = null;
-    let errorMessage : string | null = null;
-
-    
+  let successMessage: string | null = null;
+  let errorMessage: string | null = null;
 
     const sendFormData = async (event : Event) : Promise<void> => {
         event.preventDefault();
 
-        const datos : formData = {nombre, numeroCel, fecha, hora};
+    const datos: formData = { nombre, numeroCel, fecha, hora };
 
-        try {
-            const respuesta = await fetch('https://lumar-server.onrender.com/api/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(datos),
-            });
-
-            if (respuesta.ok) {
-                successMessage = 'Tu cita ha sido registrada correctamente, te esperamos!';
-                errorMessage = null;
-            } else {
-                errorMessage = 'Error al agendar tu cita, intentalo despues :c';
-                successMessage = null;
-            }
-        } catch (error) {
-            errorMessage = 'Ocurrio un error.';
-            successMessage = null;
+    try {
+      const respuesta = await fetch(
+        "https://lumar-server.onrender.com/api/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(datos),
         }
-    };
-</script>
+      );
 
+      if (respuesta.ok) {
+        successMessage =
+          "Tu cita ha sido registrada correctamente, te esperamos!";
+        errorMessage = null;
+      } else {
+        errorMessage = "Error al agendar tu cita, intentalo despues :c";
+        successMessage = null;
+      }
+    } catch (error) {
+      errorMessage = "Ocurrio un error.";
+      successMessage = null;
+    }
+  };
+</script>
 
 {#if successMessage}
   <div
     class="mt-6 p-4 max-w-lg mx-auto bg-green-100 border border-green-400 text-green-700 rounded-md flex items-center space-x-2"
   >
-    <svg
-      class="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M9 12l2 2l4-4m-7 8a9 9 0 1 0 0-18a9 9 0 0 0 0 18z"
-      />
-    </svg>
     <span>{successMessage}</span>
   </div>
 {/if}
@@ -75,20 +61,6 @@
   <div
     class="mt-6 p-4 max-w-lg mx-auto bg-red-100 border border-red-400 text-red-700 rounded-md flex items-center space-x-2"
   >
-    <svg
-      class="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M6 18L18 6M6 6l12 12"
-      />
-    </svg>
     <span>{errorMessage}</span>
   </div>
 {/if}
@@ -194,6 +166,3 @@
   </div>
 </div>
 </form>
-
-
-
