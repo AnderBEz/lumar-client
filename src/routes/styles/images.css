@@ -1,22 +1,41 @@
 header {
-    background-image: url("/src/lib/images/clientLanding.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  background-image: url("/src/lib/images/clientLanding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#Prices{
-    /* background-image: url("/src/lib/images/chair.jpg");
+#Prices {
+  /* background-image: url("/src/lib/images/chair.jpg");
     background: linear-gradient(to bottom, black, transparent); */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("/src/lib/images/chair.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("/src/lib/images/chair.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#Ubicacion{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/src/lib/images/lastImage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+#Ubicacion {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("/src/lib/images/lastImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+input[type="date"] {
+  color: #959595; /* Color del texto */ /* Color del borde */
+  font-size: 16px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #e9e9e9;
+  padding: 5px;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none; /* Ocultar los botones de incremento/decremento */
+}
+
+input[type="date"]::-webkit-clear-button {
+  display: none; /* Ocultar el botón de limpiar */
 }
