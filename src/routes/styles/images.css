@@ -20,3 +20,18 @@ header {
     background-size: cover;
     background-position: center;
 }
+
+input[type="date"] {
+    color: #959595; /* Color del texto */ /* Color del borde */
+    font-size: 16px;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #e9e9e9;
+    padding: 5px;
+  }
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none; /* Ocultar los botones de incremento/decremento */
+  }
+  input[type="date"]::-webkit-clear-button {
+    display: none; /* Ocultar el botón de limpiar */
+  }
